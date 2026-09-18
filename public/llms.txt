@@ -1,0 +1,40 @@
+# Finance Terminal
+
+> BIST, ABD borsası, kripto para, emtia (altın/gümüş), tahvil ve döviz için
+> mum grafiği, 20+ teknik indikatör ve grafik üzerine destek/direnç çizimi
+> sunan tek sayfalık web uygulaması.
+
+Bu uygulama bir React tek-sayfa uygulamasıdır: HTML kaynağında veri yoktur,
+her şey tarayıcıda çalışır. Sayfayı indirip okuyan bir asistan burada fiyat
+ya da analiz bulamaz.
+
+## Uygulamanın özellikleri (tarayıcıda)
+
+- İzleme listesi: 7 piyasa sekmesi, sembol arama/ekleme, sürükleyerek sıralama,
+  panel genişliği ayarlanabilir.
+- Grafik: 1S / 4S / 1G periyotları, EMA, Bollinger, Ichimoku, VWAP, PSAR,
+  SuperTrend, Keltner, Pivot gibi overlay'ler; RSI, MACD, Stochastic, CCI,
+  Williams %R, ATR, ADX, OBV, MFI, ROC osilatörleri.
+- Çizim araçları: yatay çizgi, trend çizgisi, dikdörtgen, metin notu.
+  Çizimler sembol bazında tarayıcıda saklanır.
+- Kullanıcı kendi formülüyle özel indikatör tanımlayabilir.
+- AI sohbet paneli (kullanıcının kendi API anahtarıyla çalışır).
+
+## API erişimi
+
+Bu uygulama server/ klasöründe kendi REST API mantığını barındırır.
+Geliştirme modunda Vite eklentisi bu API'yi localhost'ta sunar.
+Üretimde aynı mantık Vercel gibi bir serverless platforma deploy edilebilir.
+
+Sunulan uçlar:
+- `GET /api/v1/quote/{symbol}?market={market}` — anlık fiyat ve günlük değişim
+- `GET /api/v1/candles/{symbol}?market={market}&interval={interval}` — OHLCV mum verisi
+- `GET /api/v1/analyze/{symbol}?market={market}&interval={interval}` — teknik analiz
+- `GET /api/v1/search?q={metin}` — sembol arama
+- `GET /api/v1/scan?market={market}` — piyasa tarayıcı
+- `GET /api/v1/news?market={market}` — finansal haberler
+
+`market`: bist | us | crypto | commodity | bond | forex | viop
+`interval`: 1h | 4h | 1d | 1wk | 1mo
+
+Veriler Yahoo Finance kaynaklıdır, gecikmeli olabilir. Yatırım tavsiyesi değildir.
