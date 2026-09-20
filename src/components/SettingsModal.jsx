@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { X, Key, Brain, Newspaper, RotateCcw } from 'lucide-react';
 import { PROVIDERS } from '../services/aiService';
+import AdSlot from './AdSlot';
+import { AD_SLOTS } from '../config/ads';
 
 export default function SettingsModal({ isOpen, onClose, settings, updateSetting, updateSettings }) {
   const [activeTab, setActiveTab] = useState('ai');
@@ -167,6 +169,11 @@ export default function SettingsModal({ isOpen, onClose, settings, updateSetting
               </div>
             </>
           )}
+        </div>
+
+        {/* Reklam */}
+        <div className="px-5 pb-3">
+          <AdSlot slot={AD_SLOTS.settings} />
         </div>
 
         {/* Footer */}

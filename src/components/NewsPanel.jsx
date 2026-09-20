@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { X, Newspaper, ExternalLink, Loader2, RefreshCw, AlertCircle } from 'lucide-react';
 import { fetchGeneralNews, fetchCompanyNews, formatNewsDate } from '../services/newsService';
+import AdSlot from './AdSlot';
+import { AD_SLOTS } from '../config/ads';
 
 const CATEGORIES = [
   { id: 'general', label: 'Genel' },
@@ -87,6 +89,11 @@ export default function NewsPanel({ isOpen, onClose, finnhubApiKey, activeSymbol
             {label}
           </button>
         ))}
+      </div>
+
+      {/* Reklam */}
+      <div className="px-4 py-3 border-b border-wallstreet-border shrink-0">
+        <AdSlot slot={AD_SLOTS.news} format="fluid" />
       </div>
 
       {/* Content */}

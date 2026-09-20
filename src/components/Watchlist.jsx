@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Plus, X, Activity, HelpCircle, Settings, Sparkles, Newspaper } from 'lucide-react';
 import { fetchQuote, MARKET_TYPES, DEFAULT_SYMBOLS } from '../services/yahooService';
 import HelpGuide from './HelpGuide';
+import AdSlot from './AdSlot';
+import { AD_SLOTS } from '../config/ads';
 import {
   DndContext,
   closestCenter,
@@ -453,6 +455,11 @@ export default function Watchlist({
               </SortableContext>
             </DndContext>
           )}
+        </div>
+
+        {/* Reklam */}
+        <div className="shrink-0 border-t border-wallstreet-border p-2">
+          <AdSlot slot={AD_SLOTS.watchlist} />
         </div>
       </div>
 

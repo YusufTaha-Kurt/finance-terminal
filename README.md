@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/app_icon.jpg" alt="Finance Terminal" width="100" style="border-radius: 16px" />
+  <img src="public/finance-terminal.jpg" alt="Finance Terminal" width="480" style="border-radius: 16px" />
 </p>
 
 <h1 align="center">Finance Terminal</h1>
@@ -10,11 +10,16 @@
 </p>
 
 <p align="center">
+  <a href="https://borsa.yusuftahakurt.com"><strong>🔴 Live Demo</strong></a> •
   <a href="#features">Features</a> •
   <a href="#quick-start">Quick Start</a> •
   <a href="#tech-stack">Tech Stack</a> •
   <a href="#disclaimer">Disclaimer</a> •
   <a href="#türkçe">Türkçe</a>
+</p>
+
+<p align="center">
+  Don't want to clone and run it locally? Try it live: <a href="https://borsa.yusuftahakurt.com">borsa.yusuftahakurt.com</a>
 </p>
 
 ---
@@ -160,6 +165,8 @@ Pull requests are welcome. Fork the repo, create a feature branch, and submit a 
 Finance Terminal, tarayıcıda çalışan açık kaynaklı bir grafik izleme ve piyasa takip aracıdır. BIST, ABD borsası, kripto, emtia, tahvil, döviz ve VİOP piyasalarını tek ekrandan takip etmenizi sağlar.
 
 Bu uygulama **yatırım tavsiyesi vermez**. Sadece fiyat grafiklerini görüntülemenize, teknik indikatörleri uygulamanıza ve piyasa verilerini izlemenize yardımcı olur.
+
+Kurup denemek istemiyorsanız canlı sürümü buradan deneyebilirsiniz: **[borsa.yusuftahakurt.com](https://borsa.yusuftahakurt.com)**
 
 ### Ne Sunuyor?
 

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { X, HelpCircle, ChevronDown, Shield } from 'lucide-react';
+import AdSlot from './AdSlot';
+import { AD_SLOTS } from '../config/ads';
 
 // ============================================================================
 //  Konu Kategorileri
@@ -664,6 +666,11 @@ export default function HelpGuide({ isOpen, onClose }) {
             </h3>
           </div>
           <ContentComponent />
+        </div>
+
+        {/* Reklam */}
+        <div className="px-6 pb-3 shrink-0">
+          <AdSlot slot={AD_SLOTS.helpGuide} />
         </div>
 
         {/* Footer */}
